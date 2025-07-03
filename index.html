@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Park Jung Min | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Pretendard', sans-serif;
+      background-color: #F8F9FA;
+      color: #212529;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      background: linear-gradient(to right, #4DABF7, #FFA94D);
+      color: white;
+      padding: 3rem 2rem;
+      flex-wrap: wrap;
+    }
+    .header-content {
+      max-width: 500px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 900;
+    }
+    header p {
+      font-size: 1.1rem;
+      margin: 0.2rem 0;
+      color: #f3f3f3;
+      line-height: 1.5;
+    }
+    .language-line, .skills-line {
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      color: #e0e0e0;
+    }
+    .lang-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    .lang-toggle button {
+      margin-left: 0.5rem;
+      padding: 0.3rem 0.8rem;
+      font-size: 0.9rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      margin: 1rem;
+      text-decoration: none;
+      color: #212529;
+      font-weight: bold;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: #4DABF7;
+      font-weight: 900;
+      text-align: center;
+    }
+    .strength-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .strength-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .strength-card img {
+      width: 100%;
+      border-radius: 0.5rem;
+      height: auto;
+    }
+    .strength-card h3 {
+      margin: 1rem 0 0.5rem;
+      color: #FFA94D;
+    }
+    .profile-img {
+      height: 220px;
+      width: auto;
+      border-radius: 1rem;
+      border: 1px solid white;
+    }
+    .lang-content {
+      display: none;
+    }
+    .lang-en.active, .lang-ko.active {
+      display: block;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #212529;
+      color: white;
+    }
+  </style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+      document.querySelector('.lang-' + lang).classList.add('active');
+    }
+    window.onload = () => switchLang('en');
+  </script>
+</head>
+<body>
+  <div class="lang-toggle">
+    <button onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('ko')">한국어</button>
+  </div>
+
+  <div class="lang-content lang-en">
+    <header>
+      <img src="me.jpg" alt="Park Jung Min" class="profile-img" />
+      <div class="header-content">
+        <h1>Park Jung Min</h1>
+        <p>AI-Driven Content Creator</p>
+        <p>SaaS Automation Strategist</p>
+        <p>Global MICE Project Planner</p>
+        <p class="language-line"><strong>Languages:</strong> Korean (Native), English (Business), Japanese (Business)</p>
+        <p class="skills-line"><strong>Skills:</strong> Planning, Storytelling, SaaS Design, Problem Solving, Theatre Direction</p>
+      </div>
+    </header>
+
+    <nav>
+      <a href="#strengths">Core Competency</a>
+      <a href="#career">Career</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="strengths">
+      <h2>🧠 Core Competency</h2>
+      <div class="strength-grid">
+        <div class="strength-card">
+          <img src="1. Cross-Cultural Planning.png" alt="Cross-Cultural Planning">
+          <h3>Cross-Cultural Planning</h3>
+        </div>
+        <div class="strength-card">
+          <img src="2. AI-Driven Storytelling.png" alt="AI-Driven Storytelling">
+          <h3>AI-Driven Storytelling</h3>
+        </div>
+        <div class="strength-card">
+          <img src="3. SaaS-Based Automation Thinking.png" alt="SaaS-Based Automation Thinking">
+          <h3>SaaS-Based Automation Thinking</h3>
+        </div>
+        <div class="strength-card">
+          <img src="4. Creative Execution (Directing & Acting).png" alt="Creative Execution">
+          <h3>Creative Execution</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career 섹션 -->
+    <section id="career">
+      <h2>💼 Career</h2>
+      <h3>MEPS International (Team Lead, Outbound Division)</h3>
+      <ul>
+        <li>Led overseas MICE projects in Japan, Singapore, Vietnam, Thailand, and Australia</li>
+        <li>Specialized in booth planning, cultural storytelling, and ESG-themed event execution</li>
+        <li>Notable Projects:
+          <ul>
+            <li>Discover Korea in Opera House – Sydney, Australia</li>
+            <li>Day of Jeju – Suntec City, Singapore</li>
+            <li>The Meeting Show – Marina Bay Sands, Singapore</li>
+            <li>Gaya Tumuli Pop-up Booth – Osaka, Japan</li>
+            <li>Korea MICE ESG Showcase – Various Locations</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Plant Export Industry (5 years)</h3>
+      <ul>
+        <li>Participated in international tenders</li>
+        <li>Resolved discrepancies in order/shipping documents</li>
+        <li>Managed third-country (triangular) sourcing</li>
+        <li>Handled full-cycle export: contracts, L/Cs, customs, shipping, sanctions</li>
+        <li>Oversaw on-site international project execution</li>
+      </ul>
+      <h3>Content Production (10+ years)</h3>
+      <ul>
+        <li>8 OTT original appearances as an actor</li>
+        <li>2 original stage scripts written and produced</li>
+        <li>20+ stage performances</li>
+        <li>Additional experience in direction, planning, and backstage roles</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>📬 Contact</h2>
+      <p style="text-align:center; font-size: 1.1rem;">📞 +82-10-3925-1358<br>✉️ min.alto@kakao.com</p>
+      <div style="margin-top:2rem; display:flex; justify-content:center;">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScCR_hyY6G7ZbdvwjqWOhEZujredHNlhNtMr4yBIZYSn0AdbA/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+    </section>
+  </div>
+
+  <div class="lang-content lang-ko">
+  <header>
+    <img src="me.jpg" alt="박정민" class="profile-img" />
+    <div class="header-content">
+      <h1>박정민</h1>
+      <p>AI 기반 콘텐츠 제작자</p>
+      <p>SaaS 자동화 전략가</p>
+      <p>글로벌 MICE 기획 전문가</p>
+      <p class="language-line"><strong>언어:</strong> 한국어(모국어), 영어(비즈니스), 일본어(비즈니스)</p>
+      <p class="skills-line"><strong>기술 역량:</strong> 기획, 스토리텔링, SaaS 설계, 문제 해결, 연극 연출</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#strengths">핵심 역량</a>
+    <a href="#career">경력</a>
+    <a href="#contact">연락처</a>
+  </nav>
+
+  <section id="strengths">
+    <h2>🧠 핵심 역량</h2>
+    <div class="strength-grid">
+      <div class="strength-card">
+        <img src="1. Cross-Cultural Planning.png" alt="Cross-Cultural Planning">
+        <h3>다문화 기반 기획력</h3>
+      </div>
+      <div class="strength-card">
+        <img src="2. AI-Driven Storytelling.png" alt="AI 스토리텔링">
+        <h3>AI 스토리텔링</h3>
+      </div>
+      <div class="strength-card">
+        <img src="3. SaaS-Based Automation Thinking.png" alt="SaaS 자동화 사고">
+        <h3>SaaS 기반 자동화</h3>
+      </div>
+      <div class="strength-card">
+        <img src="4. Creative Execution (Directing & Acting).png" alt="Creative Execution">
+        <h3>창의적 실행력</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="career">
+    <h2>💼 경력</h2>
+    <h3>MEPS International (Outbound 본부 팀장)</h3>
+    <ul>
+      <li>일본, 싱가포르, 베트남, 태국, 호주 등지의 해외 MICE 프로젝트 총괄</li>
+      <li>부스 기획, 문화 스토리텔링, ESG 테마 이벤트 기획 및 운영</li>
+      <li>대표 프로젝트:
+        <ul>
+          <li>Discover Korea in Opera House – 호주 시드니</li>
+          <li>Day of Jeju – 싱가포르 썬텍시티</li>
+          <li>The Meeting Show – 싱가포르 마리나베이샌즈</li>
+          <li>Gaya Tumuli 팝업 부스 – 일본 오사카</li>
+          <li>Korea MICE ESG Showcase – 다양한 국가에서 개최</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>플랜트 수출 분야 (5년)</h3>
+    <ul>
+      <li>국제입찰 대응 및 계약관리</li>
+      <li>선적/서류상의 불일치(discrepancy) 문제 해결</li>
+      <li>3국 간 거래(삼각무역) 운영</li>
+      <li>계약-신용장-통관-물류 등 무역 전반 프로세스 관리</li>
+      <li>해외 현장 대응 및 프로젝트 수행</li>
+    </ul>
+    <h3>콘텐츠 제작 활동 (10년 이상)</h3>
+    <ul>
+      <li>OTT 오리지널 작품 8편 출연</li>
+      <li>창작 희곡 2편 집필 및 무대 공연</li>
+      <li>무대 출연 20편 이상</li>
+      <li>연출, 기획, 무대스텝 등 제작 관련 경험 다수</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>📬 연락처</h2>
+    <p style="text-align:center; font-size: 1.1rem;">📞 +82-10-3925-1358<br>✉️ min.alto@kakao.com</p>
+    <div style="margin-top:2rem; display:flex; justify-content:center;">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScCR_hyY6G7ZbdvwjqWOhEZujredHNlhNtMr4yBIZYSn0AdbA/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">로딩 중…</iframe>
+    </div>
+  </section>
+</div>
+
+  <footer>
+    &copy; 2025 Park Jung Min. All rights reserved.
+  </footer>
+</body>
+</html>
